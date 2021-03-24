@@ -1,0 +1,6 @@
+
+<div *ngFor="let a of albuns">
+  <!--<a routerLink="/componenteServico" [queryParams]="{{a.id}}"><h1> {{a.id}}-{{a.title}}</h1> </a>-->
+  <!-- link de conecxão passando parametro -->
+  <a href="/componenteServico/?albumId={{ a.id }}" >{{ a.title }}</a>
+</div>
