@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 export class Servico1Service {
 
   constructor(private http:HttpClient) {
+
   }
 
   public getPhotos():Observable<any>{
@@ -16,8 +17,7 @@ export class Servico1Service {
   }
 
   //Metodo para chamar as fotos by ID Album
-  public getFotosByAlbum(id):Observable<any>
-  {
+  public getFotosByAlbum(id):Observable<any> {
     console.log('servico id =', id);
     console.log('https://jsonplaceholder.typicode.com/photos?albumId='+id);
     //return this.http.get('https://jsonplaceholder.typicode.com/photos');

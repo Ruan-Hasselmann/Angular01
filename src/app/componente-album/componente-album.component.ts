@@ -18,6 +18,7 @@ export class ComponenteAlbumComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
   }
 
   getter(){
@@ -33,5 +34,4 @@ export class ComponenteAlbumComponent implements OnInit {
       }
     )
   }
-
 }

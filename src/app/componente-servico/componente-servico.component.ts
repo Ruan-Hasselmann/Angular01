@@ -24,6 +24,7 @@ export class ComponenteServicoComponent implements OnInit {
     this.id = this.activatedRoute.snapshot.queryParams["albumId"];
     console.log(this.id);
 
+    this.getter();
     this.getter2();
   }
 
@@ -46,17 +47,14 @@ export class ComponenteServicoComponent implements OnInit {
     console.log('getter2');
     console.log(this.id);
     this.photoServico.getFotosByAlbum(this.id).subscribe(
-      (data: Photo) =>
-      {
+      (data: Photo) => {
         this.photos = data;
         console.log('Variavel preenchida:', this.photos)
         console.log('recebido: ', data)
-      }, (error: any) =>
-      {
+      }, (error: any) => {
         this.erro = error;
         console.error('ERROOO:', error);
       }
     );
   }
-
 }
